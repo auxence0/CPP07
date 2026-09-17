@@ -6,7 +6,7 @@
 #    By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/22 11:52:07 by asauvage          #+#    #+#              #
-#    Updated: 2026/09/15 09:26:16 by asauvage         ###   ########.fr        #
+#    Updated: 2026/09/17 10:41:56 by asauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,9 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = Base
+NAME = Template
 
-SRCS = main.cpp \
-	   Base.cpp
+SRCS = main.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 
