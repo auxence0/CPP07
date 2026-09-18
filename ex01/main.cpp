@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 15:47:03 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/17 17:44:44 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/18 09:57:22 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 template< typename T >
 void	printTemplate( T const & print ) {
 	std::cout << print << "\n";
+}
+
+template< typename T >
+void	IncrementType( T & Type ) {
+	++Type;
 }
 
 int	main() {
@@ -31,4 +36,10 @@ int	main() {
 	std::cout << "\nTEST DISPLAY CHAR\n";
 	char	string[] = "miaou";
 	iter(string, 5, printTemplate<char>);
+	std::cout << "\nTEST INCREMENT CHAR\n";
+	iter(string, 5, IncrementType<char>);
+	iter(string, 5, printTemplate<char>);
+	std::cout << "\nTEST INCREMENT INT\n";
+	iter(int_array, 4, IncrementType<int>);
+	iter(int_array, 4, printTemplate<int>);
 }
